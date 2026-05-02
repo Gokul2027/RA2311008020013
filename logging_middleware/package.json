@@ -1,0 +1,30 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Reusable evaluation logger shared across project stages.",
+  "main": "dist/index.js",
+  "module": "esm/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./esm/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./esm/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "esm"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
